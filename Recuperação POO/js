@@ -1,0 +1,61 @@
+class Produto {
+    constructor(nome, preco, descricao) {
+      this.nome = nome;
+      this.preco = preco;
+      this.descricao = descricao;
+    }
+  
+    getNome() {
+      return this.nome;
+    }
+  
+    getPreco() {
+      return this.preco;
+    }
+  
+    getDescricao() {
+      return this.descricao;
+    }
+  
+    setPreco(novoPreco) {
+      this.preco = novoPreco;
+    }
+  }
+  
+  class Pizza extends Produto {
+    constructor(nome, preco, descricao, sabor, tamanho) {
+      super(nome, preco, descricao);
+      this.sabor = sabor;
+      this.tamanho = tamanho;
+    }
+  
+    getSabor() {
+      return this.sabor;
+    }
+  
+    getTamanho() {
+      return this.tamanho;
+    }
+  
+    setTamanho(novoTamanho) {
+      this.tamanho = novoTamanho;
+    }
+    
+    imprimirDados() {
+      console.log(`Nome: ${this.getNome()}`);
+      console.log(`Preço: ${this.getPreco()}`);
+      console.log(`Descrição: ${this.getDescricao()}`);
+      console.log(`Sabor: ${this.getSabor()}`);
+      console.log(`Tamanho: ${this.getTamanho()}`);
+    }
+  }
+  
+
+  const produto1 = new Produto("Refrigerante", 5.0, "Lata de 350ml");
+
+  const pizza1 = new Pizza("Pizza de Calabresa", 30.0, "Pizza de calabresa com mussarela", "Calabresa", "Grande");
+  
+  produto1.imprimirDados();
+  console.log("\n");
+  pizza1.imprimirDados();
+  

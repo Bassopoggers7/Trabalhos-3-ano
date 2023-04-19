@@ -20,6 +20,11 @@ class Produto {
     setPreco(novoPreco) {
       this.preco = novoPreco;
     }
+    imprimirDados() {
+        console.log(`Nome: ${this.getNome()}`);
+        console.log(`Preço: ${this.getPreco()}`);
+        console.log(`Descrição: ${this.getDescricao()}`);
+    }
   }
   
   class Pizza extends Produto {
@@ -40,22 +45,21 @@ class Produto {
     setTamanho(novoTamanho) {
       this.tamanho = novoTamanho;
     }
-    
+
     imprimirDados() {
-      console.log(`Nome: ${this.getNome()}`);
-      console.log(`Preço: ${this.getPreco()}`);
-      console.log(`Descrição: ${this.getDescricao()}`);
-      console.log(`Sabor: ${this.getSabor()}`);
-      console.log(`Tamanho: ${this.getTamanho()}`);
+        console.log(`Nome: ${this.getNome()}`);
+        console.log(`Preço: ${this.getPreco()}`);
+        console.log(`Descrição: ${this.getDescricao()}`);
+        console.log(`Sabor: ${this.getSabor()}`);
+        console.log(`Tamanho: ${this.getTamanho()}`);
     }
   }
   
 
-  const produto1 = new Produto("Refrigerante", 5.0, "Lata de 350ml");
+    let produto1 = new Produto("Refrigerante", 5.0, "Lata de 350ml");
 
-  const pizza1 = new Pizza("Pizza de Calabresa", 30.0, "Pizza de calabresa com mussarela", "Calabresa", "Grande");
+    let pizza1 = new Pizza("Pizza de Calabresa", 30.0, "Pizza de calabresa com mussarela", "Calabresa", "Grande");
   
-  produto1.imprimirDados();
-  console.log("\n");
-  pizza1.imprimirDados();
-  
+    pizza1.imprimirDados();
+    console.log("\n");
+    produto1.imprimirDados();
